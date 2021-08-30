@@ -37,9 +37,18 @@ def print_prediction(test, pred, m, slice):
     y.imshow(pred[m, :, :, slice], cmap='gray')
     plt.show()
 
+# Modifying the directory variables to run at the AWS Ubuntu server
 
-save_dir = "/home/guest/PycharmProjects/tese/Unet/dataset/"
-test_dir = save_dir + "val_data.h5"
+# Structure of the working directory 
+# ./Liver
+# ./Liver/train
+# ./Liver/val
+# ./Liver/test
+# ./Liver/datasets
+
+data_dir = "/home/ubuntu/Liver/"
+save_dir = data_dir + "datasets/"
+test_dir = save_dir + "test_data.h5"
 
 predictions = load_predictions(save_dir)
 x_test, y_test = load_dataset(test_dir)
