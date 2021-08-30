@@ -5,7 +5,7 @@ Predict Network Outcome - Vnet
 
 import numpy as np
 
-from unet import unet
+from vnet import vnet
 from utils import *
 
 
@@ -35,13 +35,22 @@ def write_predictions(predicitons, path):
     h5f.close()
     print('Predictions saved to ' + path)
 
+# Modifying the directory variables to run at the AWS Ubuntu server
 
-save_dir = "/home/guest/PycharmProjects/tese/Unet/dataset/"
-test_dir = save_dir + "val_data.h5"
-weights_dir = save_dir + "weights.h5"
+# Structure of the working directory 
+# ./Liver
+# ./Liver/train
+# ./Liver/val
+# ./Liver/test
+# ./Liver/datasets
+
+data_dir = "home/ubuntu/Liver/"
+save_dir = data_dir + "datasets/"
+test_dir = save_dir + "test_data.h5"
+weights_dir = save_dir + "weights_vnet.h5"
 
 x_test, y_test = load_dataset(test_dir)
-model = unet(input_size=(256, 256, 64, 1))
+model = vnet(input_size=(256, 256, 32, 1))#64
 model.load_weights(weights_dir)
 
 predictions = predict(x_test, model)
