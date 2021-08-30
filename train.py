@@ -9,7 +9,7 @@ import numpy as np
 from vnet import vnet
 
 
-save_dir = "/home/guest/PycharmProjects/tese/Vnet/dataset/"
+save_dir = "/home/ubuntu/datasets/"
 train_dir = save_dir + "train_data.h5"
 val_dir = save_dir + "val_data.h5"
 weights_dir = save_dir + "weights_vnet.h5"
@@ -29,6 +29,9 @@ model.fit(x_train, y_train,
           batch_size=1, epochs=8,
           validation_data=(x_val, y_val), callbacks=callbacks)
 
+model.save_weights(weights_dir)
+
+
 # datagen = ImageDataGenerator(
 #     featurewise_center=True,
 #     featurewise_std_normalization=True,
@@ -41,5 +44,3 @@ model.fit(x_train, y_train,
 # model.fit(datagen.flow(x_train, y_train, batch_size=4, seed=1),
 #           steps_per_epoch=len(x_train) / 4, epochs=8, validation_data=(x_val, y_val), callbacks=callbacks
 #           )
-
-# model.save_weights(weights_dir)
