@@ -101,8 +101,8 @@ def create_dataset(path, px_size=INPUT_SIZE, slice_count=INPUT_DEPTH, crop=False
         elif name[0] == 'v':
             volumes.append(name)
 
-    # m = len(volumes)
-    m = 8
+    m = len(volumes)
+    #m = 1
     if crop:
         print("Creating Cropped Data Set:")
     else:
@@ -153,21 +153,33 @@ def divide_segmentation(segmentation):
     # return a
     return layer1  # liver
 
+# Modifying the directory variables to run at the AWS Ubuntu server
 
-data_dir = "/home/lits_dataset/train_batch/"
+# Structure of the working directory 
+# ./Liver
+# ./Liver/train
+# ./Liver/val
+# ./Liver/test
+# ./Liver/datasets
+
+data_dir = "/home/ubuntu/Liver/"
 train_dir = data_dir + "train/"
 val_dir = data_dir + "val/"
-# test_dir = "/media/albaroz/diogo-pen/Training_Batch_1/"
-save_dir = "/home/guest/PycharmProjects/tese/Vnet/dataset/"
+test_dir = data_dir + "test/"
+save_dir = data_dir + "datasets/"
 
-# print("Obtaining Training Data:")
-# train_set = create_dataset(train_dir, crop=True)
-# write_dataset(train_set, save_dir + "train_data.h5")
+#Create datasets for train, validation, and test as the h5py files
+#The HDF5 file is a container for datasets (NumPy array-like) and groups (folder-like and work like dictionaries).
+#For more info on HDF5, visit https://docs.h5py.org/en/stable/quick.html#core-concepts
+
+print("Obtaining Training Data:")
+train_set = create_dataset(train_dir, crop=True)
+write_dataset(train_set, save_dir + "train_data.h5")
 
 print("Obtaining Validation Data:")
 val_set = create_dataset(val_dir, crop=True)
 write_dataset(val_set, save_dir + "val_data.h5")
 
-# print("Obtaining Test Data:")
-# test_set = create_dataset(test_dir)
-# write_dataset(test_set, save_dir + "test_data.h5")
+print("Obtaining Test Data:")
+test_set = create_dataset(test_dir)
+write_dataset(test_set, save_dir + "test_data.h5")
