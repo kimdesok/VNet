@@ -1,10 +1,15 @@
-# VNet - Keras
+# VNet-3D-Instance-Segmentation
 
-**MSc. Thesis** - *"3D Convolutional Neural Network for Liver Tumor Segmentation"*
+>* Original codes and datasets used in the master thesis work titled as *"3D Convolutional Neural Network for Liver Tumor Segmentation"* by Pedro Diogo da Cunha Amorim, Univ. of Porto, Portugal [1].  
+>* VNet adapted by Pedro's thesis work was originally proposed by devised by Fausto Milletari et al (See the reference [2]).
 
-Implementation of Deep Learning and Computer Vision for Liver Tumor Segmentation, using the [LiTS Dataset](https://competitions.codalab.org/competitions/17094#participate "LiTS - Liver Tumor Segmentation Challenge").
+# Datasets
+>* Liver Tumor Segmentation Challenge(LiTS) Dataset available at https://competitions.codalab.org/competitions/17094#participate
 
-# What I Learned
+# References
+[1] Pedro Diogo da Cunha Amorim, 3D Convolutional Neural Network for Liver Tumor Segmentation, Mestrado Integrado em Engenharia Eletrotécnica e de Computadores
+Supervisor: Prof. João Manuel R. S. Tavares, July 26, 2018, FACULDADE DE ENGENHARIA DA UNIVERSIDADE DO PORTO.
+[2] Fausto Milletari, Nassir Navab, and Seyed-Ahmad Ahmadi. V-net: Fully convolutional neural networks for volumetric medical image segmentation. In 3D Vision (3DV), 2016 Fourth
+International Conference on, pages 565–571. IEEE, 2016
 
-* Automatic pre-processing algorithm Medical Images in the NIfTI format with NiBabel, SciPy.
-* Successfully adapted [VNet](https://arxiv.org/abs/1606.04797 "V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation") (3D CNN Architecture) to Tensorflow/Keras.
+
