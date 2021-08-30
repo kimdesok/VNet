@@ -9,6 +9,8 @@
 # References
 [1] Pedro Diogo da Cunha Amorim, 3D Convolutional Neural Network for Liver Tumor Segmentation, Mestrado Integrado em Engenharia Eletrotécnica e de Computadores
 Supervisor: Prof. João Manuel R. S. Tavares, July 26, 2018, FACULDADE DE ENGENHARIA DA UNIVERSIDADE DO PORTO.
+
+
 [2] Fausto Milletari, Nassir Navab, and Seyed-Ahmad Ahmadi. V-net: Fully convolutional neural networks for volumetric medical image segmentation. In 3D Vision (3DV), 2016 Fourth
 International Conference on, pages 565–571. IEEE, 2016
 
