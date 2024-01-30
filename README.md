@@ -1,7 +1,7 @@
 # VNet-3D-Instance-Segmentation
 
 >* Original codes and datasets used in the master thesis work titled as *"3D Convolutional Neural Network for Liver Tumor Segmentation"* by Pedro Diogo da Cunha Amorim, Univ. of Porto, Portugal [1].  
->* VNet adapted by Pedro's thesis work was originally proposed by devised by Fausto Milletari et al (See the reference [2]).
+>* VNet adapted by Pedro's thesis work was originally proposed by Fausto Milletari et al (See the reference [2]).
 
 # Datasets
 >* Liver Tumor Segmentation Challenge(LiTS) Dataset available at https://competitions.codalab.org/competitions/17094#participate
